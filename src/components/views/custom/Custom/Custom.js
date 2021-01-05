@@ -65,13 +65,13 @@ function Custom(props) {
             <div className="paper-acc-colors">
                 <div className="letter-paper-box">
                         <img className={"letter-paper"}
-                        src={`https://in-the-future.herokuapp.com/${product}`}
+                        src={`https://to-me-in-the-future.netlify.app/${product}`}
                         alt="letter"/>
                     <p className="paper-text">Letter Paper</p>
                 </div>
                 <div className="letter-acc-box">
                 <img className={"letter-acc"}
-                        src={`https://in-the-future.herokuapp.com/${secondProduct}`}
+                        src={`https://to-me-in-the-future.netlify.app/${secondProduct}`}
                         alt="accessary"/>
                     <p className="acc-text">Accessary</p>
                 </div>

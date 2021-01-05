@@ -64,7 +64,7 @@ function FileUpload(props) {
                 {Images.map((image, index) => (
                     <div onClick={() => deleteHandler(image)} key={index}>
                         <img style={{ minWidth: '320px', width: '320px', height: '220px' }}
-                            src={`https://in-the-future.herokuapp.com/${image}`}
+                            src={`https://to-me-in-the-future.netlify.app/${image}`}
                             alt="upload file"
                         />
                     </div>

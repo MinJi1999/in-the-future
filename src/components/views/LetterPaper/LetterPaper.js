@@ -26,7 +26,7 @@ function LetterPaper(props) {
         return( 
             <div className="product-container" key={index}>
                 <a href={`/product/${product._id}`}>
-                    <img src={`https://in-the-future.herokuapp.com/${product.images}`}
+                    <img src={`https://to-me-in-the-future.netlify.app/${product.images}`}
                             className="letter-paper-image1" 
                             alt="product"/>
                 </a>

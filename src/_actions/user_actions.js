@@ -11,12 +11,12 @@ import {
   } from "./types";
   
   import apiClient from "../components/apiClient";
-  
-  const USERS_PATH = "/api/users";
+  import { USER_SERVER } from '../components/Config.js';
+
   
   export function registerUser(dataToSubmit) {
     const request = apiClient
-      .post(`${USERS_PATH}/register`, dataToSubmit)
+      .post(`${USER_SERVER}/register`, dataToSubmit)
       .then((response) => response.data);
   
     return {
@@ -27,7 +27,7 @@ import {
   
   export function loginUser(dataToSubmit) {
     const request = apiClient
-      .post(`${USERS_PATH}/login`, dataToSubmit)
+      .post(`${USER_SERVER}/login`, dataToSubmit)
       .then((response) => response.data);
   
     return {
@@ -38,7 +38,7 @@ import {
   
   export function auth() {
     const request = apiClient
-      .get(`${USERS_PATH}/auth`)
+      .get(`${USER_SERVER}/auth`)
       .then((response) => response.data);
   
     return {
@@ -49,7 +49,7 @@ import {
   
   export function logoutUser() {
     const request = apiClient
-      .get(`${USERS_PATH}/logout`)
+      .get(`${USER_SERVER}/logout`)
       .then((response) => response.data);
   
     return {
@@ -84,7 +84,7 @@ import {
       productId: id
     };
     const request = apiClient
-      .post(`${USERS_PATH}/addToCart`, body)
+      .post(`${USER_SERVER}/addToCart`, body)
       .then((response) => response.data);
   
     return {

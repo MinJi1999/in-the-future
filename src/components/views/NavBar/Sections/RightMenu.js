@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import {Breadcrumb} from "antd";
 import apiClient from "../../../apiClient";
-import {StepForwardOutlined} from "@ant-design/icons";
+import {ShoppingCartOutlined} from "@ant-design/icons";
 
 function RightMenu(props) {
   const user = useSelector(state => state.user)
@@ -43,7 +43,7 @@ function RightMenu(props) {
       <div style={{position:"fixed",zIndex: 5,width:"100%",display:"flex",justifyContent:"flex-end",fontFamily: "'Lora', serif",padding: "15px 30px 0px 0px"}}>
           <Badge count={user.userData && user.userData.cart.length} style={{ marginRight: 17, backgroundColor:"#fffdef", color:"#514739", fontWeight:"bolder"}}>
             <a href="/user/cart" className="head-example" style={{ marginRight: 20, color: '#667777'}}>
-              <StepForwardOutlined style={{ fontSize: 30, marginRight: 5, color:"rgb(124, 119, 119)"}}/>
+              <ShoppingCartOutlined style={{ fontSize: 30, marginRight: 5, color:"rgb(124, 119, 119)"}}/>
             </a>
           </Badge>
         <Breadcrumb>

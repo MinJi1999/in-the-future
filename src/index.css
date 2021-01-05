@@ -153,25 +153,24 @@ section.first-page{
     font-family: 'Lora', serif;
 
 }
-.first-page .right-side-page .today-text{
+.first-page .right-side-page .today-text {
     position: relative;
-    top: 16%;
-    left: 26%;
-    width: 300px;
+    top: 13%;
+    left: 34%;
+    width: 220px;
     margin: 0;
     font-family: 'Nanum Myeongjo', serif;
     font-size: 35px;
     color: rgb(185, 182, 179);
     animation: opacity 2s;
 }
-.first-page .right-side-page .line{
+.first-page .right-side-page .line {
     position: absolute;
-    top: 18.2%;
-    margin-left: 5px;
-    height: 2px;
+    top: 22.2%;
+    height: 1.5px;
     width: 150px;
-    background: rgb(201, 197, 194);    
-    left: 46.5%;
+    background: rgb(201, 197, 194);
+    left: 41.5%;
     animation: opacity 3s;
 }
 .first-page .right-side-page .future-text{
