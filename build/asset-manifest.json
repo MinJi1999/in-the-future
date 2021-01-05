@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.917e0f7f.chunk.css",
+    "main.js": "/static/js/main.afb03b3e.chunk.js",
+    "main.js.map": "/static/js/main.afb03b3e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c012fedc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c012fedc.js.map",
+    "static/css/2.cc6972a9.chunk.css": "/static/css/2.cc6972a9.chunk.css",
+    "static/js/2.f1292056.chunk.js": "/static/js/2.f1292056.chunk.js",
+    "static/js/2.f1292056.chunk.js.map": "/static/js/2.f1292056.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.cc6972a9.chunk.css.map": "/static/css/2.cc6972a9.chunk.css.map",
+    "static/css/main.917e0f7f.chunk.css.map": "/static/css/main.917e0f7f.chunk.css.map",
+    "static/js/2.f1292056.chunk.js.LICENSE.txt": "/static/js/2.f1292056.chunk.js.LICENSE.txt",
+    "static/media/cutted-letter.b572d7ea.png": "/static/media/cutted-letter.b572d7ea.png",
+    "static/media/cutted-paper.91fc6e63.png": "/static/media/cutted-paper.91fc6e63.png",
+    "static/media/letter-1.65e035ad.jpg": "/static/media/letter-1.65e035ad.jpg",
+    "static/media/letter1-1.40290873.jpg": "/static/media/letter1-1.40290873.jpg",
+    "static/media/sea.1ac87411.jpg": "/static/media/sea.1ac87411.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c012fedc.js",
+    "static/css/2.cc6972a9.chunk.css",
+    "static/js/2.f1292056.chunk.js",
+    "static/css/main.917e0f7f.chunk.css",
+    "static/js/main.afb03b3e.chunk.js"
+  ]
+}

@@ -1,0 +1,468 @@
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+
+input.error {
+  border-color: red;
+}
+
+
+.input-feedback {
+  color: red;
+  height: 5px;
+  margin-top: -12px;
+}
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}   
+@font-face {
+    font-family: 'UhBeeyul';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeyul.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+#root{
+    position: relative;
+    z-index: -20;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    z-index: -20;
+    margin: 0;
+    /* background: linear-gradient(#ffffff 0%, #bbdefb 25%, #8eb2be 80%);*/
+}
+
+.wrap{
+    /* scroll-snap-type: y mandatory; */
+    z-index: -15;
+    position: relative;
+}
+::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  /* Track 남은 부분*/
+  ::-webkit-scrollbar-track {
+    background:rgba(209, 198, 175, 0.445);; 
+  }
+   
+  /* Handle 스크롤바 */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(209, 193, 158); 
+    border-radius: 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:rgb(95, 178, 255);; 
+  }
+section.first-page{
+    z-index: -10;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* scroll-snap-align: center; */
+}
+ 
+.first-page .left-side-page{
+    position: relative;
+    z-index: -6;
+    width: 50vw;
+    height: 100vh;
+    background-color: rgb(226, 222, 219);
+    overflow: hidden;
+}
+
+.first-page .first-page-title {
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    left: 60px;
+    width: 60vw;
+    font-family: 'Chosunilbo_myungjo', serif;
+    font-size: 60px;
+    font-weight: lighter;
+    line-height: 100px;
+    color: rgb(124, 119, 119);
+    /* text-shadow: 5px 7px rgb(202, 196, 195); */
+    text-align: left;
+    animation: opacity 2s ;
+}
+
+.first-page .first-page-sentence{
+    position: absolute;
+    top: 75%;
+    left: 60px;
+    font-family: 'NanumSquare', sans-serif !important;
+    font-size: 15px;
+    color: rgb(141, 137, 135);
+    letter-spacing: 3px;
+    line-height: 20px;
+    animation: opacity 3s ;
+}
+.first-page .right-side-page{
+    position: relative;
+    z-index: -5;
+    width: 50vw;
+    height: 100vh;
+}
+.first-page .ant-breadcrumb{
+    width: 210px;
+    display: flex;
+    position: absolute;
+    left: 72%;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+.first-page .ant-breadcrumb .ant-breadcrumb-link a{
+    color: rgb(156, 149, 149);
+    font-family: 'Lora', serif;
+
+}
+.first-page .ant-breadcrumb-separator{
+    margin: 0px 15px 0 13px;
+    color: rgb(153, 146, 146);
+    font-family: 'Lora', serif;
+}
+.first-page .ant-breadcrumb > a{
+    color: rgb(124, 119, 119);
+    font-family: 'Lora', serif;
+
+}
+.first-page .right-side-page .today-text{
+    position: relative;
+    top: 16%;
+    left: 26%;
+    width: 300px;
+    margin: 0;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 35px;
+    color: rgb(185, 182, 179);
+    animation: opacity 2s;
+}
+.first-page .right-side-page .line{
+    position: absolute;
+    top: 18.2%;
+    margin-left: 5px;
+    height: 2px;
+    width: 150px;
+    background: rgb(201, 197, 194);    
+    left: 46.5%;
+    animation: opacity 3s;
+}
+.first-page .right-side-page .future-text{
+    position: relative;
+    top: 18%;
+    left: 50%;
+    width: 300px;
+    margin: 0;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 35px;
+    color:   rgb(102, 100, 98);;
+    animation: opacity 4s;
+
+}
+.first-page .right-side-page .sea-pic{
+    width: 400px;
+    opacity: 0.9;
+    position: absolute;
+    top: 34%;
+    left: 27%;
+    animation: opacity-sea-pic 1.5s;
+}
+@keyframes opacity-sea-pic{
+    0%{
+        top:38%;
+        opacity: 0;
+    }
+    100%{
+        top:34%;
+        opacity: 0.9;
+    }
+}
+/* .first-page .first-page-title span{
+    color: rgb(198, 237, 255);
+} */
+.first-page .under-text-container{
+    z-index: 1;
+    position: absolute;
+    top: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    align-self: flex-end;
+}
+
+.first-page .under-text-container .fa-angle-down{
+    z-index: 1;
+    position: absolute;
+    color: rgb(177, 171, 169);
+    font-size: 70px;
+    animation: under-icon 1.5s ease infinite;
+    cursor: pointer;
+}
+@keyframes under-icon {
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: 30%;
+    }
+}
+
+/*background-attachment: fixed 화면 고정*/
+
+
+section.about{
+    z-index: -10;
+    position: relative;
+    height: 210vh;
+    background-color:#f7e2da42;
+ 
+}
+.about .about-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about .about-first-text,
+.about .about-second-text,
+.about .about-third-text,
+.about .about-fourth-text,
+.about .about-fifth-text{
+    position: relative;
+    color:#535353;
+    font-family: 'UhBeeyul';
+    font-size: 70px;
+    letter-spacing: 10px;
+    animation: none;
+}
+.about .about-first-text{
+    margin: 100px 600px 100px 0px;
+}
+.about .about-second-text{
+    margin: 100px 0px 100px 600px;
+}
+.about .about-third-text{
+    margin: 100px 600px 100px 0px;
+}
+.about .about-fourth-text{
+    margin: 100px 0px 100px 600px;
+}
+.about .about-fifth-text{
+    margin: 100px 600px 100px 0px;
+    text-align: center;
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+section.introduce{
+    z-index: -10;
+    position: relative;
+    height: 100vh;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-wrap: wrap;
+}
+.introduce .left-background-page{
+    z-index: -5;
+    position: relative;
+    width: 40%;
+    height: 100vh;
+    background-color: rgb(182, 182, 182);
+}
+.introduce .image-container{
+    opacity: 0.9;
+    position: absolute;
+    top: 95px;
+    left: 100px;
+    z-index: -4;
+    width: 1500px;
+    height: 650px;
+    background-color: rgb(221, 221, 221);
+}
+.introduce .letter-image1{
+    z-index: 1;
+    position: absolute;
+    top: 125px;
+    left: 100px;
+    width: 350px;
+    transition: all 0.5s;
+}
+.introduce .letter-image2{
+    z-index: -1;
+    position: absolute;
+    top: 125px;
+    left: 550px;
+    width: 350px;
+    transition: all 0.5s;
+}
+
+.introduce .letter-image1:hover,
+.introduce .letter-image2:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+@keyframes letter-show{
+    0%{
+        opacity: 0;
+        left: -20px;
+
+    }
+    100%{
+        opacity: 1;
+        left: 0px;
+    }
+}
+@keyframes image-container-move{
+    0%{
+        opacity: 0;
+        left: 80px;
+    }
+    100%{
+        opacity: 1;
+        left: 100px;
+    }
+}
+@keyframes letter-image-move{
+    0%{
+        opacity: 0;
+        /* left: 35px; */
+    }
+    100%{
+        opacity: 1;
+        /* left: 55px; */
+    }
+}
+@keyframes letter-image-move2{
+    0%{
+        opacity: 0;
+        /* left: 265px; */
+    }
+    100%{
+        opacity: 1;
+        /* left: 285px; */
+    }
+}
+@keyframes letter-image-move3{
+    0%{
+        opacity: 0;
+        left: 155px;
+    }
+    100%{
+        opacity: 1;
+        left: 175px;
+    }
+}
+@keyframes letter-sentence-move{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes letter-button-move{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.introduce .sentence-container{
+    display: flex;
+    position: absolute;
+    top: 220px;
+    left: 65%;
+    width: 400px;
+    height: 350px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: rgb(238, 238, 238);
+}
+.introduce .sentence-container .title{
+    position: relative;
+    top:-33%;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: lighter;
+    font-size: 30px;
+    color:rgb(82, 75, 69);
+    margin: 0;
+    border-bottom: 3px rgba(54, 48, 42, 0.212) solid;
+}
+
+.introduce .sentence-container .second-title{
+    position: relative;
+    top:-28%;
+    margin: 0;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    color:rgb(63, 57, 53);
+
+}
+
+.introduce .sentence-container .main-sentence{
+    position: absolute;
+    top:28%;
+    font-size: 15px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: normal;
+    line-height: 25px;
+    text-align: center;
+    color: rgb(129, 129, 129);
+    margin-top: 15px;
+}
+.introduce .link-to-custom-page .link-button{
+    position: relative;
+    top: 100px;
+    padding: 3px 40px;
+    background-color: rgba(112, 76, 41, 0.534);
+    text-decoration: none;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+    transition: all 0.3s ease-out;
+}
+.introduce .link-to-custom-page .link-button:hover{
+    background-color: rgba(201, 168, 136, 0.534);
+    color: #ffffff;
+
+}

@@ -1,0 +1,349 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    z-index: -20;
+    position: relative;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    /* 스크롤 없애기
+    overflow-y: hidden;*/ 
+    overflow-x: hidden;
+}
+section.confirm{
+    z-index: -11;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#d3cfc144;
+}
+.confirm .cutted-paper{
+    z-index: -10;
+    position: relative;
+    top: -5%;
+    left: -33%;
+    animation: paper1 ease 1.5s;
+}
+.confirm .link-to-chooseColor-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 13%;
+    left: -39%;
+    width: 300px;
+    height: 100px;
+    cursor: pointer;
+    animation: link-container 1.5s;
+
+}
+@keyframes link-container{
+    0%{
+        opacity: 0;
+        top: 16%;
+    }
+    50%{
+        opacity: 0.8;
+        top: 14%;
+    }
+    100%{
+        opacity: 1;
+        top: 13%;
+    }
+}
+.confirm .fa-arrow-left{
+    font-size: 40px;
+    position: absolute;
+    left: 12.5%;
+    top: 49.5%;
+    color: #e0e0e0;
+}
+.confirm .text{
+    font-size: 25px;
+    position: absolute;
+    color: #757575;
+    font-family: 'Noto Serif KR', serif;
+    border-bottom: 6.5px solid #e0e0e0;
+}
+@keyframes paper1{
+    0%{
+        opacity: 0;
+        top: -5%;
+    }
+    50%{
+        opacity: 1;
+        top: -3%;
+    }
+    100%{
+        opacity: 1;
+        top: -5%;
+    }
+}
+.paper-acc-colors{
+    position: relative;
+    top: -18%;
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.letter-paper-box{
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px rgb(190, 190, 190) solid;
+    background-color: white;
+    margin-right: 100px;
+}
+.letter-paper{
+    z-index: 2;
+    position: relative;
+    height: 240px;
+    width:  178px;
+    margin: 10px 0px 0px 10px;
+}
+.letter-acc-box{
+    width: 300px;
+    height: 210px;
+    overflow: hidden;
+    border: 1px rgb(190, 190, 190) solid;
+    background-color: white;
+    margin-right: 100px;
+}
+.letter-acc{
+    z-index: 2;
+    position: relative;
+    height: 150px;
+    width:280px;
+    margin: 10px 0px 0px 10px;
+}
+.colors-container{
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 260px;
+    height: 350px;
+}
+.color-box1{
+    z-index: 1;
+    width: 120px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px rgb(190, 190, 190) solid;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.color-box2{
+    z-index: 1;
+    width: 120px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px rgb(190, 190, 190) solid;
+    background-color: white;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.color-box3{
+    z-index: 1;
+    width: 120px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px rgb(190, 190, 190) solid;
+    background-color: white;
+}
+.color-box4{
+    z-index: 1;
+    width: 120px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px rgb(190, 190, 190) solid;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.chosen-color1 {
+    z-index: 2;
+    position: relative;
+    width: 98px;
+    height: 98px;
+    margin: 10px 0px 0px 10px;
+    transition: all 0.2s;
+}
+.chosen-color2 {
+    z-index: 2;
+    position: relative;
+    width: 98px;
+    height: 98px;
+    margin: 10px 0px 0px 10px;
+    transition: all 0.2s;
+}
+.chosen-color3{
+    z-index: 2;
+    position: relative;
+    width: 98px;
+    height: 98px;
+    margin: 10px 0px 0px 10px;
+    transition: all 0.2s;
+}
+.chosen-color4{
+    z-index: 2;
+    position: relative;
+    width: 98px;
+    height: 98px;
+    margin: 10px 0px 0px 10px;
+    transition: all 0.2s;
+}
+.color-name{
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+    color: rgba(85, 81, 75, 0.925);
+    text-align: center;
+    font-weight: bold;
+    padding: 9px 2px 9px 2px;
+    margin-top:2px;
+}
+.paper-text,
+.acc-text{
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    color: rgb(85, 81, 75);
+    text-align: center;
+    padding: 9px 2px 9px 2px;
+    margin-top: 2px;
+}
+
+.chosen-color1:hover,
+.chosen-color2:hover,
+.chosen-color3:hover,
+.chosen-color4:hover{
+    transform: scale(1.2);
+    transition: all ease-out 0.2s;
+}
+
+/* explanation-container */
+.explanation-container{
+    width: 1100px;
+    position: relative;
+    top: -19%;
+}
+.explanation-container .title{
+    position: relative;
+    width: auto;
+    margin-bottom: 20px;
+    color: #75746d;
+    font-size: 50px;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: bold;
+}
+.explanation-container .sentence-container{
+    position: relative;
+    left: 1%;
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+.explanation-container .sentence{
+    position: relative;
+    width: 500px;
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 16px;
+    line-height: 23.5px;
+    color: #96948f;
+}
+.explanation-container .second-sentence{
+    position: relative;
+    width: 550px;
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 16px;
+    line-height: 24px;
+    color: #96948f;
+}
+.explanation-container .second-sentence .magic{
+    transition: all 1s;
+    animation: color-change ease infinite 1s;
+}
+@keyframes color-change{
+    0%{
+        color: #96948f;
+    }
+    30%{
+        color: rgb(64, 115, 224);
+    }
+    100%{
+        color: #0c0042;
+    }
+}
+.explanation-container .second-sentence .magic2{
+    display: none;
+    color: rgb(231, 216, 0);
+    animation: opacity ease-in-out 1s;
+}
+.explanation-container .second-sentence .magic:hover{
+    font-size: 40px;
+    cursor: pointer;
+    transition: ease-out 1s;
+}
+.confirm .cutted-paper2{
+    position: absolute;
+    top: 76.5%;
+    z-index: -10;
+    width: 40vw;
+    height: 200px;
+    animation: paper2 ease 2.5s;
+    cursor: pointer;
+    left: 60%;
+}
+@keyframes paper2{
+    0%{
+        opacity: 0;
+        margin-top: 40px;
+    }
+    50%{
+        opacity: 1;
+        margin-top: -10px;
+        height: 210px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+/*section success*/
+section.success{
+    position: relative;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d3cfc144;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+

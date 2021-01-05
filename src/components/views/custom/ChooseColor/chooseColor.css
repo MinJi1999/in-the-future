@@ -1,0 +1,244 @@
+body,
+html {
+    margin: 0;
+}
+#root > div{
+    position: relative;
+    z-index: -50;
+}
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* choose color page*/
+
+section.first-color-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+
+.color-text {
+    height: 168px;
+    width: 1192px;
+    top: 40%;
+    left: 29%;
+    position: absolute;
+    z-index: 5;
+    color: rgba(0, 0, 0, 0.598);
+    font-size: 97px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 154px;
+    background-color: rgba(255, 255, 255, 0.639);
+    animation: opacity ease 1.5s;
+}
+.color1 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #7dc2ff;
+    animation: opacity ease 1s;
+}
+.color2 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color:#659dcf;
+    animation: opacity ease 1.5s;
+}
+.color3 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #4d789e;
+    animation: opacity ease 2s;
+}
+.color4 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #395975;
+    animation: opacity ease 2.5s;
+}
+.second-color-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+.color5 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #9ebc99;
+    animation: opacity ease 1s;
+}
+.color6 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #4e7851;
+    animation: opacity ease 1.5s;
+}
+.color7 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #4c644d;
+    animation: opacity ease 2s;
+}
+.color8 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #2a412b;
+    animation: opacity ease 2.5s;
+}
+.third-color-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+.color9 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #f2b0a5;
+    animation: opacity ease 1s;
+}
+.color10 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #d49b91;
+    animation: opacity ease 1.5s;
+}
+.color11 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #aa7c74;
+    animation: opacity ease 2s;
+}
+.color12 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #815f59;
+    animation: opacity ease 2.5s;
+}
+.fourth-color-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+.color13 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #be9ddf;
+    animation: opacity ease 1s;
+}
+.color14 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color:#9a7fb4;
+    animation: opacity ease 1.5s;
+}
+.color15 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color: #76618a;
+    animation: opacity ease 2s;
+}
+.color16 {
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 50vw;
+    cursor: pointer;
+    background-color:#564764;
+    animation: opacity ease 2.5s;
+}
+
+.alert {
+    z-index:11;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
