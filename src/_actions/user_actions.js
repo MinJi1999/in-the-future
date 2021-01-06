@@ -59,7 +59,7 @@ import {
   
   export function getCartItems(cartItems, userCart) {
     const request = apiClient
-      .get(`/product/products_by_id?id=${cartItems}&type=array`)
+      .get(`/api/product/products_by_id?id=${cartItems}&type=array`)
       .then((res) => {
         userCart.forEach((cartItem) => {
           res.data.forEach((productDetail, index) => {
@@ -94,7 +94,7 @@ import {
   
   export function removeCartItem(productId) {
     const request = apiClient
-      .get(`/users/removeFromCart?id=${productId}`)
+      .get(`/api/users/removeFromCart?id=${productId}`)
       .then((res) => {
         res.data.cart.forEach((item) => {
           res.data.productInfo.forEach((product, index) => {
@@ -114,7 +114,7 @@ import {
   
   export function onSuccessBuy(data) {
     const request = apiClient
-      .post(`/users/successBuy`, data)
+      .post(`/api/users/successBuy`, data)
       .then((res) => res.data);
   
     return {
