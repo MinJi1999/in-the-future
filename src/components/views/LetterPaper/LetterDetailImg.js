@@ -7,7 +7,7 @@ function LetterDetailImg(props) {
             let images = [];
 
             props.detail.images.map((image) => {
-                return images.push(`https://to-me-in-the-future.netlify.app/${image}`)
+                return images.push(`https://to-me-in-the-future.herokuapp.com/${image}`)
             })
             setImages(images);
         }

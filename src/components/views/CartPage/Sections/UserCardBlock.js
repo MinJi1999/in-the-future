@@ -6,7 +6,7 @@ function UserCardBlock(props) {
     const renderCartImage = (images) => {
         if(images.length > 0){
             let image = images[0];
-            return `https://to-me-in-the-future.netlify.app/${image}`;
+            return `https://to-me-in-the-future.herokuapp.com/${image}`;
         }
     }
     const renderItems = () => (

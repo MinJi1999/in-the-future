@@ -11,12 +11,11 @@ import {
   } from "./types";
   
   import apiClient from "../components/apiClient";
-  import { USER_SERVER } from '../components/Config.js';
-
+  const USERS_PATH = "/users";
   
   export function registerUser(dataToSubmit) {
     const request = apiClient
-      .post(`${USER_SERVER}/register`, dataToSubmit)
+      .post(`${USERS_PATH}/register`, dataToSubmit)
       .then((response) => response.data);
   
     return {
@@ -27,7 +26,7 @@ import {
   
   export function loginUser(dataToSubmit) {
     const request = apiClient
-      .post(`${USER_SERVER}/login`, dataToSubmit)
+      .post(`${USERS_PATH}/login`, dataToSubmit)
       .then((response) => response.data);
   
     return {
@@ -38,7 +37,7 @@ import {
   
   export function auth() {
     const request = apiClient
-      .get(`${USER_SERVER}/auth`)
+      .get(`${USERS_PATH}/auth`)
       .then((response) => response.data);
   
     return {
@@ -49,7 +48,7 @@ import {
   
   export function logoutUser() {
     const request = apiClient
-      .get(`${USER_SERVER}/logout`)
+      .get(`${USERS_PATH}/logout`)
       .then((response) => response.data);
   
     return {
@@ -60,7 +59,7 @@ import {
   
   export function getCartItems(cartItems, userCart) {
     const request = apiClient
-      .get(`/api/product/products_by_id?id=${cartItems}&type=array`)
+      .get(`/product/products_by_id?id=${cartItems}&type=array`)
       .then((res) => {
         userCart.forEach((cartItem) => {
           res.data.forEach((productDetail, index) => {
@@ -84,7 +83,7 @@ import {
       productId: id
     };
     const request = apiClient
-      .post(`${USER_SERVER}/addToCart`, body)
+      .post(`${USERS_PATH}/addToCart`, body)
       .then((response) => response.data);
   
     return {
@@ -95,7 +94,7 @@ import {
   
   export function removeCartItem(productId) {
     const request = apiClient
-      .get(`/api/users/removeFromCart?id=${productId}`)
+      .get(`/users/removeFromCart?id=${productId}`)
       .then((res) => {
         res.data.cart.forEach((item) => {
           res.data.productInfo.forEach((product, index) => {
@@ -115,7 +114,7 @@ import {
   
   export function onSuccessBuy(data) {
     const request = apiClient
-      .post(`/api/users/successBuy`, data)
+      .post(`/users/successBuy`, data)
       .then((res) => res.data);
   
     return {
