@@ -9,16 +9,14 @@ body{
     position: relative;
     margin: 0;
     width: 100vw;
-    height: 100vh;
-    /* 스크롤 없애기
-    overflow-y: hidden;*/ 
+    height: 838px;
     overflow-x: hidden;
 }
 section.confirm{
     z-index: -11;
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 838px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,14 +58,8 @@ section.confirm{
         top: 13%;
     }
 }
-.confirm .fa-arrow-left{
-    font-size: 40px;
-    position: absolute;
-    left: 12.5%;
-    top: 49.5%;
-    color: #e0e0e0;
-}
-.confirm .text{
+
+.confirm .cutted-paper-text{
     font-size: 25px;
     position: absolute;
     color: #757575;
@@ -179,7 +171,10 @@ section.confirm{
     margin-left: 20px;
 }
 
-.chosen-color1 {
+.chosen-color1,
+.chosen-color2,
+.chosen-color3,
+.chosen-color4 {
     z-index: 2;
     position: relative;
     width: 98px;
@@ -187,30 +182,7 @@ section.confirm{
     margin: 10px 0px 0px 10px;
     transition: all 0.2s;
 }
-.chosen-color2 {
-    z-index: 2;
-    position: relative;
-    width: 98px;
-    height: 98px;
-    margin: 10px 0px 0px 10px;
-    transition: all 0.2s;
-}
-.chosen-color3{
-    z-index: 2;
-    position: relative;
-    width: 98px;
-    height: 98px;
-    margin: 10px 0px 0px 10px;
-    transition: all 0.2s;
-}
-.chosen-color4{
-    z-index: 2;
-    position: relative;
-    width: 98px;
-    height: 98px;
-    margin: 10px 0px 0px 10px;
-    transition: all 0.2s;
-}
+
 .color-name{
     font-family: 'Lora', serif;
     font-size: 12px;
@@ -233,14 +205,13 @@ section.confirm{
     color: rgb(85, 81, 75);
     text-align: center;
     padding: 9px 2px 9px 2px;
-    margin-top: 2px;
 }
 
 .chosen-color1:hover,
 .chosen-color2:hover,
 .chosen-color3:hover,
 .chosen-color4:hover{
-    transform: scale(1.2);
+    transform: scale(1.25);
     transition: all ease-out 0.2s;
 }
 
@@ -308,6 +279,15 @@ section.confirm{
     cursor: pointer;
     transition: ease-out 1s;
 }
+.under-cutted-paper-image-text{
+    font-size: 25px;
+    position: absolute;
+    bottom: 50px;
+    right: 62px;
+    width: 207px;
+    color: #5a4838;
+    font-family: 'Noto Serif KR', serif;
+}
 .confirm .cutted-paper2{
     position: absolute;
     top: 76.5%;
@@ -339,7 +319,7 @@ section.success{
     position: relative;
     z-index: -10;
     width: 100vw;
-    height: 100vh;
+    height: 838px;
     background-color: #d3cfc144;
     display: flex;
     flex-direction: row;

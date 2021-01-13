@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Icon, Badge } from 'antd';
-import axios from 'axios';
+import { Badge } from 'antd';
+
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
@@ -14,7 +14,7 @@ function RightMenu(props) {
   const logoutHandler = () => {
     apiClient.get(`${USER_SERVER}/logout`).then(response => {
       if (response.status === 200) {
-        props.history.push("/login");
+        props.history.push("/");
       } else {
         alert('Log Out Failed')
       }
@@ -41,15 +41,26 @@ function RightMenu(props) {
   } else {
     return (
       <div style={{position:"fixed",zIndex: 5,width:"100%",display:"flex",justifyContent:"flex-end",fontFamily: "'Lora', serif",padding: "15px 30px 0px 0px"}}>
-          <Badge count={user.userData && user.userData.cart.length} style={{ marginRight: 17, backgroundColor:"#fffdef", color:"#514739", fontWeight:"bolder"}}>
-            <a href="/user/cart" className="head-example" style={{ marginRight: 20, color: '#667777'}}>
-              <ShoppingCartOutlined style={{ fontSize: 30, marginRight: 5, color:"rgb(124, 119, 119)"}}/>
-            </a>
-          </Badge>
+        <div style={{display:"flex", flexDirection:"row", alignItems:"flex-start", marginRight:"20px", position:"relative"}}>
+          <a href="/user/cart" className="head-example" style={{color: '#667777'}}>
+            <ShoppingCartOutlined style={{ fontSize: 30, color:"rgb(124, 119, 119)", position:"relative", zIndex:"1"}}/>
+          </a>
+          <Badge count={user.userData && user.userData.cart.length} style={{backgroundColor:"#fffdef", color:"#514739", fontWeight:"bolder",margin: "-6px 0 0 -4px", position:"relative", zIndex:"-1"}}/>
+        </div>
+        <a href="/user/history" style={{color: "rgb(124, 119, 119)",
+        fontFamily: "'Lora', serif",fontSize:"20px", marginRight:"20px"}}>
+          history
+        </a>
+        <a href="/upload/product" style={{color: "rgb(124, 119, 119)",
+        fontFamily: "'Lora', serif",fontSize:"20px", marginRight:"20px"}}>
+          upload
+        </a>
         <Breadcrumb>
           <Breadcrumb.Item key="logout">
             <a onClick={logoutHandler} style={{color: "rgb(124, 119, 119)",
-            fontFamily: "'Lora', serif",fontSize:"20px",marginRight:"10px"}}>Logout</a>
+            fontFamily: "'Lora', serif",fontSize:"20px"}}>
+              Logout
+            </a>
           </Breadcrumb.Item>
         </Breadcrumb>
       </div>

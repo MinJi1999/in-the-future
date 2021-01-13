@@ -102,7 +102,7 @@ function RegisterPage(props) {
           alignItems: 'center',
           height: "100vh"
             }}>
-            <h2>Sign up</h2>
+            <h2 style={{margin : "0 0 20px 40px"}}>Sign up</h2>
             <Form style={{ minWidth: '375px' }} {...formItemLayout} onSubmit={handleSubmit} >
 
               <Form.Item required label="Name">

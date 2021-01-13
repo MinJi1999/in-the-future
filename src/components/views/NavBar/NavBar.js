@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RightMenu from './Sections/RightMenu';
-import { Drawer, Button, Icon } from 'antd';
+import { Drawer, Button } from 'antd';
 import './Sections/Navbar.css';
 
 function NavBar() {

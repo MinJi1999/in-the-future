@@ -5,7 +5,6 @@ import Letter from './Letter';
 import Introduce from './Introduce';
 
 function Main(props) {
-    console.log(props)
     const [Today, setToday] = React.useState("");
     const [Future, setFuture] = React.useState("");
     React.useEffect(() => {

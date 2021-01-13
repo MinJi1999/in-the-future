@@ -9,9 +9,8 @@ import {
     GET_CART_ITEMS,
     GET_COLORS
   } from "./types";
-  
   import apiClient from "../components/apiClient";
-  const USERS_PATH = "/users";
+  const USERS_PATH = "/api/users";
   
   export function registerUser(dataToSubmit) {
     const request = apiClient

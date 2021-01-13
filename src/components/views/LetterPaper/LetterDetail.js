@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios';
 import ProductImage from './LetterDetailImg';
 import ProductDescription from './LetterDescription';
 import { useDispatch } from 'react-redux';

@@ -20,7 +20,7 @@ section.first-color-page {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 838px;
     width: 100vw;
 }
 
@@ -42,7 +42,7 @@ section.first-color-page {
 .color1 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #7dc2ff;
@@ -51,7 +51,7 @@ section.first-color-page {
 .color2 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color:#659dcf;
@@ -60,7 +60,7 @@ section.first-color-page {
 .color3 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #4d789e;
@@ -69,7 +69,7 @@ section.first-color-page {
 .color4 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #395975;
@@ -79,13 +79,13 @@ section.first-color-page {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 838px;
     width: 100vw;
 }
 .color5 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #9ebc99;
@@ -94,7 +94,7 @@ section.first-color-page {
 .color6 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #4e7851;
@@ -103,7 +103,7 @@ section.first-color-page {
 .color7 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #4c644d;
@@ -112,7 +112,7 @@ section.first-color-page {
 .color8 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #2a412b;
@@ -122,13 +122,13 @@ section.first-color-page {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 838px;
     width: 100vw;
 }
 .color9 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #f2b0a5;
@@ -137,7 +137,7 @@ section.first-color-page {
 .color10 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #d49b91;
@@ -146,7 +146,7 @@ section.first-color-page {
 .color11 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #aa7c74;
@@ -155,7 +155,7 @@ section.first-color-page {
 .color12 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #815f59;
@@ -165,13 +165,13 @@ section.first-color-page {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 838px;
     width: 100vw;
 }
 .color13 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #be9ddf;
@@ -180,7 +180,7 @@ section.first-color-page {
 .color14 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color:#9a7fb4;
@@ -189,7 +189,7 @@ section.first-color-page {
 .color15 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color: #76618a;
@@ -198,7 +198,7 @@ section.first-color-page {
 .color16 {
     position: relative;
     z-index: 1;
-    height: 50vh;
+    height: 419px;
     width: 50vw;
     cursor: pointer;
     background-color:#564764;

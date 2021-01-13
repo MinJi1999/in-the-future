@@ -5,7 +5,6 @@ import ChooseColor4 from "./ChooseColor4";
 function ChooseColor3(props) {
     const [Click, setClick] = React.useState(false)
     
-    console.log(props)
     const saveColors = (e)=>{
         const colorArray = [];
             let color = e.target;
@@ -17,7 +16,6 @@ function ChooseColor3(props) {
             props.history.push("/choosecolor4");
             setClick(true);
     }
-    const thirdColorLS = localStorage.getItem("color3");
 
     if(Click){
         return <ChooseColor4 {...props} />

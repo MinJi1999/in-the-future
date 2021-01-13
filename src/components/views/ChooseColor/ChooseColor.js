@@ -1,20 +1,16 @@
 import React from 'react'
 import './chooseColor.css';
-import Image from "../../../images/color-text-box.png"
 import ChooseColor2 from "./ChooseColor2";
-import { useDispatch } from 'react-redux';
-import { chooseColor } from '../../../../_actions/user_actions';
 
 
 function ChooseColor(props) {
-    const dispatch = useDispatch();
     const [Click, setClick] = React.useState(false);
      const firstColorLS = localStorage.getItem("color");
+
      if (firstColorLS) {
-         return <div className="alert">이미 색상을 선택하셨습니다!</div>,
-         setTimeout(() => (props.history.push("/custom")),3000);
+         setTimeout(() => (props.history.push("/custom")),1000);
+         return <div className="alert">이미 색상을 선택하셨습니다!</div>
      }
-    console.log(props)
 
     const saveColors = (e)=>{
         const colorArray = [];

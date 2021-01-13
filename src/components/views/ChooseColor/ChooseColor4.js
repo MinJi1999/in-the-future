@@ -1,13 +1,11 @@
 import React from 'react'
 import './chooseColor.css';
 import Custom from '../Custom/Custom'
-import { useDispatch } from "react-redux";
-import { colorChoose } from "../../../../_actions/user_actions";
 
-function ChooseColor4(props) {
-    
-    console.log(props)
+
+function ChooseColor4(props) {    
     const [Click, setClick] = React.useState(false)
+
     const saveColors = (e)=>{
         const colorArray = [];
             let color = e.target;
@@ -19,7 +17,6 @@ function ChooseColor4(props) {
             props.history.push("/custom");
             setClick(true);
     }
-    const fourthColorLS = localStorage.getItem("color4");
  
     if(Click){
         return <Custom/>

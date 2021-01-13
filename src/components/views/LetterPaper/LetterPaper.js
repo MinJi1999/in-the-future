@@ -1,11 +1,9 @@
 import React from 'react'
 import './LetterPaper.css';
-import axios from 'axios';
-import apiClient from "../../apiClient";
-
+import apiClient from "../../apiClient"
+// import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 function LetterPaper(props) {
-    console.log(props)
     const [Products, setProducts] = React.useState([]);
 
     React.useEffect(() => { 
@@ -19,16 +17,15 @@ function LetterPaper(props) {
                 }
             })
         }, [])
-        console.log(Products)
 
     
     const renderCards = Products.map((product, index) => {
         return( 
             <div className="product-container" key={index}>
                 <a href={`/product/${product._id}`}>
-                    <img src={`https://to-me-in-the-future.herokuapp.com/${product.images}`}
+                    <img src={product.images}
                             className="letter-paper-image1" 
-                            alt="product"/>
+                            alt="product"/>                        
                 </a>
                 <div className="description-container">
                     <div className="paper-title">{product.title}</div>
@@ -44,7 +41,7 @@ function LetterPaper(props) {
                 <div className="letter-images-container">
                     <div className="text-container">
                         <h2 className="title" onClick={() => {return props.history.push("/choosecolor");}}>
-                            편지지와<br/>장식품을<br/>골라볼까요.
+                            편지지 하나와<br/>장식품 한 개,<br/>두 개를 고른 뒤,<br/>이곳을 눌러주세요.
                         </h2>
                     </div>
                     {renderCards}

@@ -2,9 +2,7 @@ import * as React from 'react'
 import { useDispatch } from 'react-redux';
 import { chooseColor } from '../../../_actions/user_actions';
 
-
 function HistoryPage(props) {
-    console.log(props)    
     const dispatch = useDispatch();
     const firstColorLS = localStorage.getItem("color");
     const secondColorLS = localStorage.getItem("color2");
@@ -12,7 +10,6 @@ function HistoryPage(props) {
     const fourthColorsLS = localStorage.getItem("color4");
     const colorArray = [];
     colorArray.push(firstColorLS,secondColorLS,thirdColorsLS,fourthColorsLS);
-
     React.useEffect(() => {
         if(colorArray){
             dispatch(chooseColor(colorArray))
@@ -45,7 +42,12 @@ function HistoryPage(props) {
                         <td>{item.price}</td>
                         <td>{item.quantity}</td>
                         <td>{item.dateOfPurchase}</td>
-                        <td>{props.user.colorArray}</td>
+                        <td>
+                            {props.user.colorArray[0]} , 
+                            {props.user.colorArray[1]} , 
+                            {props.user.colorArray[2]} , 
+                            {props.user.colorArray[3]}
+                        </td>
                     </tr>
                 ))}
             </tbody>

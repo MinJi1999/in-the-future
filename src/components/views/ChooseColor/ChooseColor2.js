@@ -16,7 +16,6 @@ function ChooseColor2(props) {
             props.history.push("/choosecolor3");
             setTimeout(setClick(true),1000);
     }
-    const secondColorLS = localStorage.getItem("color2");
  
     if(Click){
         return <ChooseColor3 {...props} />

@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { useDispatch } from 'react-redux';
-import { userScrollFadeIn } from '../../../hooks/userScrollFadeIn';
 import './custom.css';
-import Image from '../../../images/cutted-letter.png';
-import Image2 from '../../../images/cutted-paper.png';
-import { getCartItems,chooseColor } from '../../../../_actions/user_actions';
-import CartPage from '../../CartPage/CartPage';
+import Image from '../../images/cutted-letter.png';
+import Image2 from '../../images/cutted-paper.png';
+import { getCartItems,chooseColor } from '../../../_actions/user_actions';
+import CartPage from '../CartPage/CartPage';
 
 
 function Custom(props) {     
@@ -14,7 +13,8 @@ function Custom(props) {
     const secondColorLS = localStorage.getItem("color2");
     const thirdColorsLS = localStorage.getItem("color3");
     const fourthColorsLS = localStorage.getItem("color4");
-
+    
+    const [loading, setLoading] = React.useState(true)
     const [product, setProduct] = React.useState("");
     const [secondProduct, setSecondProduct] = React.useState("");
 
@@ -45,6 +45,7 @@ function Custom(props) {
                 })
                 dispatch(getCartItems(cartItems,props.user.userData.cart ))
                 .then(res => {
+                    setLoading(false);
                     return (setProduct(res.payload[0].images),
                     setSecondProduct(res.payload[1].images))
                 })
@@ -58,21 +59,54 @@ function Custom(props) {
             <section className="confirm">
             
             <div className="link-to-chooseColor-page" onClick={canChooseColorAgain}>
-                <i className="fas fa-arrow-left"></i>
-                <div className="text">색 다시 고르기</div>
+                <i className="fas fa-arrow-left" 
+                    style={{
+                        fontSize: "40px",
+                        position: "absolute",
+                        left: "12.5%",
+                        top: "49.5%",
+                        color: "#e0e0e0"}}></i>
+                <div className="cutted-paper-text">색 다시 고르기</div>
             </div>
             <img className="cutted-paper" src={Image} alt="cutted paper" />
             <div className="paper-acc-colors">
                 <div className="letter-paper-box">
+                {
+                    loading
+                        ? <h2 style={{
+                                    color: "rgba(83, 83, 83, 0.5)",
+                                    margin: "100px auto",
+                                    width: "150px",
+                                    height: "50px",
+                                    textAlign: "center",
+                                    backgroundColor: "rgb(200, 200, 200, 0.4)"
+                                }}>
+                                . . .
+                            </h2>
+                        :
                         <img className={"letter-paper"}
-                        src={`https://to-me-in-the-future.herokuapp.com/${product}`}
-                        alt="letter"/>
+                        src={product}
+                        alt="letter"/>}
                     <p className="paper-text">Letter Paper</p>
                 </div>
                 <div className="letter-acc-box">
-                <img className={"letter-acc"}
-                        src={`https://to-me-in-the-future.herokuapp.com/${secondProduct}`}
-                        alt="accessary"/>
+                {
+                loading
+                    ? 
+                    <h2 style={{
+                                color: "rgba(83, 83, 83, 0.5)",
+                                margin: "55px auto",
+                                width: "150px",
+                                height: "50px",
+                                textAlign: "center",
+                                backgroundColor: "rgb(200, 200, 200, 0.4)"
+                            }}>
+                            . . .
+                        </h2>
+                    :
+                    <img className={"letter-acc"}
+                        src={secondProduct}
+                        alt="accessary"/>}
                     <p className="acc-text">Accessary</p>
                 </div>
                 <div className="colors-container">
@@ -112,7 +146,18 @@ function Custom(props) {
 
                     </div>
             </div>
-            <img className="cutted-paper2" src={Image2} alt="cutted-paper" onClick={() => {props.history.push("/user/cart")}}/>
+            <i className="fas fa-level-down-alt"
+                    style={{
+                        transform:"scaleX(-1)",
+                        fontSize: "40px",
+                        position: "absolute",
+                        right: "275px",
+                        bottom: "30px",
+                        color: "#e9c3a0",
+                        }}></i>
+            <div className="under-cutted-paper-image-text">장바구니로 가기</div>
+            <img className="cutted-paper2" src={Image2} alt="cutted-paper" 
+                onClick={() => {props.history.push("/product/letterpaper")}}/>
         </section>
         <section className="success">
                 <CartPage {...props}/>

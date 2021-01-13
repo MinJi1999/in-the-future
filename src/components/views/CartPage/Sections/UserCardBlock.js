@@ -2,11 +2,10 @@ import React from 'react'
 import './UserCardBlock.css';
 
 function UserCardBlock(props) {
-    console.log(props)
     const renderCartImage = (images) => {
         if(images.length > 0){
             let image = images[0];
-            return `https://to-me-in-the-future.herokuapp.com/${image}`;
+            return image;
         }
     }
     const renderItems = () => (

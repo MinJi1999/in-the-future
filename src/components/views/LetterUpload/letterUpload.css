@@ -1,0 +1,330 @@
+section.letter-upload{
+    z-index: -50;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 838px;
+}
+.upload-container{
+    z-index: -40;
+    position: relative;
+    width: 1800px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:#f3f0ed;
+    animation: opacity 1s;
+}
+.left-side-text{
+    position: absolute;
+    top: -25px;
+    left: 9px;
+    width: 765px;
+    color: rgba(78, 71, 65, 0.238);
+    font-size: 121px;
+    font-weight: bold;
+    letter-spacing: 21px;
+    transition: all 0.5s;
+    animation: opacity ease 3s;
+    cursor: pointer;
+}
+
+.line-animation {
+    z-index: -11;
+    position: absolute;
+    top: 190px;
+    left: 70px;
+    display: inline-block;
+    width: 350px;
+    height: 200px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    letter-spacing: 4px;
+    font-size: 24px;
+    transition: 0.2s;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.line-animation span{
+    display: block;
+    position: absolute;
+}
+
+.line-animation span:nth-child(2){
+    bottom: -100%;
+    left: 0%;
+    width: 10px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    animation: line1 infinite 3s;
+}
+.line-animation:hover span:nth-child(2){
+    bottom: 100%;
+    transition: 1s;
+}
+@keyframes line1{
+    0%{
+        bottom: -100%;
+        width: 10px;
+        left: 0%;
+        height: 100%;
+    }
+    100%{
+        bottom: 100%;
+    }
+} 
+.line-animation span:nth-child(3){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 10px;
+    animation: line2 infinite 3s;
+    background: rgb(255, 255, 255);
+    animation-delay: 2s;
+}
+.line-animation:hover span:nth-child(3){
+    left: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+@keyframes line2{
+    0%{
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 10px;
+    }
+    100%{
+        left: 100%;
+    }
+} 
+
+.right-side-text{
+    position: absolute;
+    bottom: 12px;
+    right: -1px;
+    width: 765px;
+    color:rgba(78, 71, 65, 0.4);
+    text-align: right;
+    font-weight: bold;
+    font-size: 121px;
+    letter-spacing: 21px;
+    line-height: 156px;
+    animation: opacity ease 5s;
+    cursor: pointer;
+}
+.right-icon{
+    position: absolute;
+    right: 20px;
+    font-size: 80px;
+    color: rgba(159, 152, 146, 0.721);
+}
+.right-icon:hover{
+    color: rgba(138, 126, 115);
+}
+
+.line-animation2 {
+    z-index: -11;
+    position: absolute;
+    bottom: 73px;
+    right: 70px;
+    display: inline-block;
+    width: 418px;
+    height: 200px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    color: rgba(159, 152, 146, 0.721);
+    letter-spacing: 4px;
+    font-size: 24px;
+    transition: 0.2s;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.line-animation2 span{
+    display: block;
+    position: absolute;
+}
+
+.line-animation2 span:nth-child(2){
+    top: 0%;
+    right: 0%;
+    width: 10px;
+    height: 0px;
+    animation: line3 infinite 3s;
+}
+.line-animation2:hover span:nth-child(2){
+    top: 100%;
+    height: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+@keyframes line3{
+    0%{
+        top: 0%;
+        right: 0%;
+        width: 10px;
+        height: 0px;
+    }
+    100%{
+        top: 100%;
+        height: 100%;
+        background: rgba(159, 152, 146, 0.721);
+    }
+} 
+.line-animation2 span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 10px;
+    animation: line4 infinite ease-in 3s;
+    animation-delay: 1.2s;
+
+}
+.line-animation2:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+@keyframes line4{
+    0%{
+        bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 10px;
+    background:  rgba(159, 152, 146, 0.721);
+    }
+    100%{
+        right: 100%;
+    }
+} 
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.pic-uploader{
+    position: relative;
+    top: 3px;
+    width: 377px;
+    height: 179px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 170px;
+    border: 1px  rgba(164, 141, 119, 0.224) solid;
+    cursor: pointer;
+    transition: all 1s;
+    animation: opacity 2s;
+    background-color: rgba(253, 249, 244, 0.768);
+}
+.pic-uploader:hover{
+    box-shadow: 10px 10px rgba(167, 160, 153, 0.395);
+}
+
+.uploader-text{
+    position: absolute;
+    width: 450px;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: -3px;
+    line-height: 48px;
+    text-align: center;
+    color: rgba(138, 126, 115, 0.816);
+}
+
+.uploader-sentence{
+    position: relative;
+    top: 40px;
+    left: 10px;
+    font-family: NanumSquare, sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: rgb(110, 100, 92);
+
+}
+
+.loading-box{
+    z-index: 0;
+    position: relative;
+    display: flex;
+    width: 350px;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8cfc7;
+    animation: opacity 2s;
+    box-shadow: 10px 10px  rgba(167, 160, 153, 0.395);
+}
+
+.loading-text{
+    color: rgba(83, 83, 83, 0.619);
+    height: 50px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.503);
+    text-align: center;
+    transition: all 0.5s;
+}
+.loading-text:hover{
+    box-shadow: 7px 7px rgba(132, 126, 120, 0.469);
+}
+.secret-box{
+    z-index: -10;
+    position: relative;
+    top: 70px;
+    left: 0px;
+    width: 350px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    margin-left: -281px;
+    padding: 3px 0px 3px 10px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: NanumSquare, sans-serif;
+    color: rgb(95, 90, 86);
+    animation: opacity ease 3s;
+    transition: ease-in-out 1s;
+}
+.secret-box:hover{
+    left: 280px;
+}
+.magic-text{
+    width: 50px;
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    color: rgb(74, 70, 65);;
+    transition: all 1s;
+    text-align: center;
+    animation: opacity ease 4s;
+}
+
+.upload-text{
+    position: absolute;
+    right: 358px;
+    top: 65px;
+    width: 31px;
+    font-family: NanumSquare, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    background-color:rgba(209, 198, 175, 0.445);
+    transition: all 1s;
+}
+.upload-text:hover{
+    background-color:white;
+    color:rgba(176, 168, 150, 0.7);
+
+}

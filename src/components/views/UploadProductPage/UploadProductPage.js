@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import apiClient from "../../apiClient";
 import { Form, Input } from 'antd';
 import FileUpload from '../../utils/FileUpload';
-import Axios from 'axios';
+
 const { TextArea } = Input;
 
 
@@ -27,12 +27,10 @@ function UploadProductPage(props) {
         setPrice(currentValue);
     }
 
-
     const updateImages = (newImages) => {
         setImages(newImages)
     }
 
-console.log(props.user)
     const submitHandler = (e) => {
         e.preventDefault();
         if(!Title || !Description || !Price || !Images.length === 0){
@@ -53,7 +51,7 @@ console.log(props.user)
                 alert('상품 업로드에 성공했습니다!');
                 props.history.push('/');
             }else {
-                alert('상품 업로드에 실패했습니다.');
+                alert('상품 업로드에 실패했습니다..');
             }
         })
     }
@@ -62,14 +60,10 @@ console.log(props.user)
     return (
         <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <h2>편지 종이 업로드</h2>
+                <h2>편지지 업로드</h2>
             </div>
-
-            <Form onSubmit = {submitHandler}>
-                {/* {dropZone} */}    
-
+            <Form onSubmit={submitHandler}>
                 <FileUpload refreshFunction={updateImages}/>            
-
                 <br />
                 <br />
                 <label>이름</label>
@@ -84,7 +78,7 @@ console.log(props.user)
                 <Input type="number" onChange={priceChangeHandler} value={Price}/>
                 <br />
                 <br />
-                <button type="submit">
+                <button type="submit" onClick={submitHandler}>
                     확인
                 </button>
             </Form>

@@ -14,7 +14,6 @@ input.error {
 .input-feedback {
   color: red;
   height: 5px;
-  margin-top: -12px;
 }
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 
@@ -47,11 +46,9 @@ body {
     position: relative;
     z-index: -20;
     margin: 0;
-    /* background: linear-gradient(#ffffff 0%, #bbdefb 25%, #8eb2be 80%);*/
 }
 
 .wrap{
-    /* scroll-snap-type: y mandatory; */
     z-index: -15;
     position: relative;
 }
@@ -61,7 +58,7 @@ body {
   
   /* Track 남은 부분*/
   ::-webkit-scrollbar-track {
-    background:rgba(209, 198, 175, 0.445);; 
+    background:rgba(209, 198, 175, 0.445); 
   }
    
   /* Handle 스크롤바 */
@@ -76,7 +73,7 @@ body {
   }
 section.first-page{
     z-index: -10;
-    height: 100vh;
+    height: 838px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -89,7 +86,7 @@ section.first-page{
     position: relative;
     z-index: -6;
     width: 50vw;
-    height: 100vh;
+    height: 838px;
     background-color: rgb(226, 222, 219);
     overflow: hidden;
 }
@@ -105,7 +102,6 @@ section.first-page{
     font-weight: lighter;
     line-height: 100px;
     color: rgb(124, 119, 119);
-    /* text-shadow: 5px 7px rgb(202, 196, 195); */
     text-align: left;
     animation: opacity 2s ;
 }
@@ -125,7 +121,7 @@ section.first-page{
     position: relative;
     z-index: -5;
     width: 50vw;
-    height: 100vh;
+    height: 838px;
 }
 .first-page .ant-breadcrumb{
     width: 210px;
@@ -203,9 +199,7 @@ section.first-page{
         opacity: 0.9;
     }
 }
-/* .first-page .first-page-title span{
-    color: rgb(198, 237, 255);
-} */
+
 .first-page .under-text-container{
     z-index: 1;
     position: absolute;
@@ -236,15 +230,11 @@ section.first-page{
     }
 }
 
-/*background-attachment: fixed 화면 고정*/
-
-
 section.about{
     z-index: -10;
     position: relative;
-    height: 210vh;
+    height: 1760px;
     background-color:#f7e2da42;
- 
 }
 .about .about-text-container{
     display: flex;
@@ -261,7 +251,6 @@ section.about{
     font-family: 'UhBeeyul';
     font-size: 70px;
     letter-spacing: 10px;
-    animation: none;
 }
 .about .about-first-text{
     margin: 100px 600px 100px 0px;
@@ -291,7 +280,7 @@ section.about{
 section.introduce{
     z-index: -10;
     position: relative;
-    height: 100vh;
+    height: 838px;
     background-color: rgb(238, 238, 238);
     display: flex;
     flex-wrap: wrap;
@@ -300,7 +289,7 @@ section.introduce{
     z-index: -5;
     position: relative;
     width: 40%;
-    height: 100vh;
+    height: 838px;
     background-color: rgb(182, 182, 182);
 }
 .introduce .image-container{
