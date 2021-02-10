@@ -137,7 +137,7 @@ section.confirm{
 .color-box1{
     z-index: 1;
     width: 120px;
-    height: 150px;
+    height: 160px;
     overflow: hidden;
     border: 1px rgb(190, 190, 190) solid;
     background-color: white;
@@ -146,7 +146,7 @@ section.confirm{
 .color-box2{
     z-index: 1;
     width: 120px;
-    height: 150px;
+    height: 160px;
     overflow: hidden;
     border: 1px rgb(190, 190, 190) solid;
     background-color: white;
@@ -156,7 +156,7 @@ section.confirm{
 .color-box3{
     z-index: 1;
     width: 120px;
-    height: 150px;
+    height: 160px;
     overflow: hidden;
     border: 1px rgb(190, 190, 190) solid;
     background-color: white;
@@ -164,7 +164,7 @@ section.confirm{
 .color-box4{
     z-index: 1;
     width: 120px;
-    height: 150px;
+    height: 160px;
     overflow: hidden;
     border: 1px rgb(190, 190, 190) solid;
     background-color: white;
