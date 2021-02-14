@@ -1,59 +1,33 @@
 import * as React from 'react'
-import { useDispatch } from 'react-redux';
-import { chooseColor } from '../../../_actions/user_actions';
+import Data from "./Data";
+import Pagination from "./Pagination";
 
 function HistoryPage(props) {
-    const dispatch = useDispatch();
-    const firstColorLS = localStorage.getItem("color");
-    const secondColorLS = localStorage.getItem("color2");
-    const thirdColorsLS = localStorage.getItem("color3");
-    const fourthColorsLS = localStorage.getItem("color4");
-    const colorArray = [];
-    colorArray.push(firstColorLS,secondColorLS,thirdColorsLS,fourthColorsLS);
-    React.useEffect(() => {
-        if(colorArray){
-            dispatch(chooseColor(colorArray))
+    const [currentPage, setCurrentPage] = React.useState(1);
+    const [userData, setUserData] = React.useState([]);
+    const perPage = 10;
+
+    React.useEffect(()=>{
+        if(props.user.userData){
+            const data = props.user.userData.history;
+            setUserData(data)
         }
-    }, [])
+    },[props.user.userData])
+
+    const indexOfLast = currentPage * perPage;
+    const indexOfFirst = indexOfLast - perPage;
+
+    function sliceData(data){
+        let slicedData;
+        slicedData = data.slice(indexOfFirst, indexOfLast);
+        return slicedData;
+    }
 
     return (
-        <div style={{ width: '80%', margin: '3rem auto'}}>
-        <div style={{ textAlign: 'center'}}>
-            <h1>History</h1>
-        </div>
-        <br />
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Payment ID</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Date Of Purchase</th>
-                    <th>Colors</th>
-                </tr>
-            </thead>
-        
-        
-            <tbody>
-                {props.user.userData && props.user.userData.history.map((item) => (
-                    <tr key={item.id}>
-                        <td>{item.id}</td>
-                        <td>{item.price}</td>
-                        <td>{item.quantity}</td>
-                        <td>{item.dateOfPurchase}</td>
-                        <td>
-                            {props.user.colorArray[0]} , 
-                            {props.user.colorArray[1]} , 
-                            {props.user.colorArray[2]} , 
-                            {props.user.colorArray[3]}
-                        </td>
-                    </tr>
-                ))}
-            </tbody>
-        </table>
-
-    </div>
+        <>
+            <Data data={sliceData(userData)}/>
+            <Pagination totalData={userData.length} perPage={perPage} paginate={setCurrentPage}/>
+        </>
     )
 }
 

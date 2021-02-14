@@ -23,7 +23,7 @@ function RightMenu(props) {
 
   if (user.userData && !user.userData.isAuth) {
     return (
-      <div style={{position:"fixed", zIndex: 5,display:"flex",justifyContent:"flex-end",width: '100%',fontFamily: "'Lora', serif",padding: "15px 30px 0px 0px"}}>
+      <div style={{position:"fixed",top: 0 ,zIndex: 5,display:"flex",justifyContent:"flex-end",width: '100%',fontFamily: "'Lora', serif",padding: "15px 30px 0px 0px"}}>
         <Breadcrumb mode={props.mode}>
           <Breadcrumb.Item key="mail">
             <a href="/login" style={{color:"rgb(156, 149, 149)",fontSize:"20px"}}>
@@ -40,7 +40,7 @@ function RightMenu(props) {
     )
   } else {
     return (
-      <div style={{position:"fixed",zIndex: 5,width:"100%",display:"flex",justifyContent:"flex-end",fontFamily: "'Lora', serif",padding: "15px 30px 0px 0px"}}>
+      <div style={{position:"fixed",top: 0,zIndex: 5,width:"100%",display:"flex",justifyContent:"flex-end",fontFamily: "'Lora', serif",padding: "15px 30px 0px 0px"}}>
         <div style={{display:"flex", flexDirection:"row", alignItems:"flex-start", marginRight:"20px", position:"relative"}}>
           <a href="/user/cart" className="head-example" style={{color: '#667777'}}>
             <ShoppingCartOutlined style={{ fontSize: 30, color:"rgb(124, 119, 119)", position:"relative", zIndex:"1"}}/>
