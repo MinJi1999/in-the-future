@@ -69,7 +69,7 @@ body {
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background:rgb(95, 178, 255);; 
+    background:rgb(175, 147, 87); 
   }
 section.first-page{
     z-index: -10;
