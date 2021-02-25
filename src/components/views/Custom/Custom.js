@@ -15,6 +15,7 @@ function Custom(props) {
     const fourthColorsLS = localStorage.getItem("color4");
     
     const [loading, setLoading] = React.useState(true)
+    const [secondLoading, setSecondLoading] = React.useState(true)
     const [product, setProduct] = React.useState("");
     const [secondProduct, setSecondProduct] = React.useState("");
 
@@ -37,21 +38,41 @@ function Custom(props) {
 
     //고른 이미지 뿌려주기
     React.useEffect(() => {
-        let cartItems = [];
-        if(props.user.userData && props.user.userData.cart){
-            if(props.user.userData.cart.length > 0){
-                props.user.userData.cart.forEach( item => {
+    let cartItems = [];
+    if (props.user.userData && props.user.userData.cart) {
+        if (props.user.userData.cart.length > 0) {
+            props
+                .user
+                .userData
+                .cart
+                .forEach(item => {
                     cartItems.push(item.id);
                 })
-                dispatch(getCartItems(cartItems,props.user.userData.cart ))
-                .then(res => {
-                    setLoading(false);
-                    return (setProduct(res.payload[0].images),
-                    setSecondProduct(res.payload[1].images))
-                })
-            }
+            dispatch(getCartItems(cartItems, props.user.userData.cart)).then(res => {
+                const responseLength = res.payload.length;
+                const response = res.payload;
+                console.log(res)
+                switch (responseLength) {
+                    case 1:
+                        setLoading(false);
+                        setSecondLoading(true);
+                        setProduct(response[0].images[0]);
+                        console.log("페이로드하나");
+                        break;
+                    case 2:
+                        setLoading(false);
+                        setSecondLoading(false);
+                        setProduct(response[0].images[0]);
+                        setSecondProduct(response[1].images[0]);
+                        console.log("페이로드둘");
+                        break;
+                    default:
+                        break;
+                }
+            })
         }
-    }, [props.user.userData])
+    }
+}, [props.user.userData])
 
     
     return (
@@ -75,13 +96,18 @@ function Custom(props) {
                     loading
                         ? <h2 style={{
                                     color: "rgba(83, 83, 83, 0.5)",
-                                    margin: "100px auto",
-                                    width: "150px",
-                                    height: "50px",
+                                    margin: "81px auto",
+                                    width: "172px",
+                                    height: "87px",
                                     textAlign: "center",
-                                    backgroundColor: "rgb(200, 200, 200, 0.4)"
+                                    backgroundColor: "rgb(200, 200, 200, 0.4)",
+                                    cursor: "pointer",
+                                    fontSize: "18px"
+                                }}
+                                onClick={()=>{
+                                    props.history.push('/product/letterpaper')
                                 }}>
-                                . . .
+                                상품이 없습니다.<br/>여기를 누르면 고르러 갈 수 있어요!
                             </h2>
                         :
                         <img className={"letter-paper"}
@@ -91,17 +117,22 @@ function Custom(props) {
                 </div>
                 <div className="letter-acc-box">
                 {
-                loading
+                secondLoading
                     ? 
                     <h2 style={{
                                 color: "rgba(83, 83, 83, 0.5)",
-                                margin: "55px auto",
-                                width: "150px",
-                                height: "50px",
+                                margin: "28px auto",
+                                padding: "10px",
+                                width: "250px",
                                 textAlign: "center",
-                                backgroundColor: "rgb(200, 200, 200, 0.4)"
+                                backgroundColor: "rgb(200, 200, 200, 0.4)",
+                                cursor: "pointer",
+                                fontSize: "18px"
+                            }}
+                            onClick={()=>{
+                                props.history.push('/product/letterpaper')
                             }}>
-                            . . .
+                                상품이 없습니다.<br/>여기를 누르면 고르러 갈 수 있어요!
                         </h2>
                     :
                     <img className={"letter-acc"}
