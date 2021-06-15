@@ -2,9 +2,12 @@ import React from 'react'
 import './LetterPaper.css';
 import apiClient from "../../apiClient"
 // import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
+import LetterDetail from './LetterDetail'
 
 function LetterPaper(props) {
     const [Products, setProducts] = React.useState([]);
+    const [productId, setProductId] = React.useState('')
+    const [isModal, setIsModal] = React.useState(false)
 
     React.useEffect(() => { 
         apiClient
@@ -18,11 +21,19 @@ function LetterPaper(props) {
             })
         }, [])
 
-    
+    const openModal = () => {
+        setIsModal(true)
+    }
+    const closeModal = () => {
+        setIsModal(false)
+    }
     const renderCards = Products.map((product, index) => {
         return( 
             <div className="product-container" key={index}>
-                <a href={`/product/${product._id}`}>
+                <a onClick={() => {
+                        setProductId(product._id)
+                        openModal()
+                    }}>
                     <img src={product.images}
                             className="letter-paper-image1" 
                             alt="product"/>                        
@@ -46,6 +57,7 @@ function LetterPaper(props) {
                     </div>
                     {renderCards}
                 </div>
+                <LetterDetail props={productId} open={isModal} close={closeModal} />
             </section>  
         </>
     )
