@@ -39,7 +39,8 @@ function Custom(props) {
     //고른 이미지 뿌려주기
     React.useEffect(() => {
     let cartItems = [];
-    if (props.user.userData && props.user.userData.cart) {
+    //if (props.user.userData?.cart) //props.user.userData가 있으면 cart값을 주고 아니면 undefined나 null 값을 줌
+    if (props.user.userData) { 
         if (props.user.userData.cart.length > 0) {
             props
                 .user
@@ -51,25 +52,29 @@ function Custom(props) {
             dispatch(getCartItems(cartItems, props.user.userData.cart)).then(res => {
                 const responseLength = res.payload.length;
                 const response = res.payload;
-                console.log(res)
                 switch (responseLength) {
                     case 1:
                         setLoading(false);
                         setSecondLoading(true);
                         setProduct(response[0].images[0]);
-                        console.log("페이로드하나");
                         break;
                     case 2:
                         setLoading(false);
                         setSecondLoading(false);
                         setProduct(response[0].images[0]);
                         setSecondProduct(response[1].images[0]);
-                        console.log("페이로드둘");
                         break;
                     default:
+                        setLoading(false);
+                        setSecondLoading(false);
+                        setProduct(response[0].images[0]);
+                        setSecondProduct(response[1].images[0]);
                         break;
                 }
             })
+        }else {
+            setLoading(true)
+            setSecondLoading(true)
         }
     }
 }, [props.user.userData])
