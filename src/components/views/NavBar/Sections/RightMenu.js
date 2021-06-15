@@ -14,7 +14,7 @@ function RightMenu(props) {
   const logoutHandler = () => {
     apiClient.get(`${USER_SERVER}/logout`).then(response => {
       if (response.status === 200) {
-        props.history.push("/");
+        props.history.push("/login");
       } else {
         alert('Log Out Failed')
       }
