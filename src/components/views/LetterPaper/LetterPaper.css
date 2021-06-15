@@ -131,10 +131,17 @@ section.letter-paper{
 }
 
 /* Modal in LetterDetail */
-
 .black-bg{
+    background-color: rgba(0, 0, 0, 0.541);
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 838px;
+}
+.box-shadow{
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -200,12 +207,13 @@ section.letter-paper{
     font-weight: bolder;
     text-align: center;
     line-height: 75px;
-    color: #87837be7;
+    color: #e9e2d5e7;
     cursor: pointer;
     transition: ease 0.5s;
 }
 .modal-close:hover{
     background-color: rgb(255, 255, 255);
+    color: #87837be7;
 }
 .modal-wrap{
     width: 500px;
