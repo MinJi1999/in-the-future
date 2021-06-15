@@ -2,7 +2,6 @@ import React from 'react'
 
 function LetterDescription(props) {
     const [Description, setDescription] = React.useState([]);
-
     React.useEffect(() => {
         if(props.detail.description){
             let description = [];
