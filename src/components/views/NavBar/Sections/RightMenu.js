@@ -1,20 +1,26 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Badge } from 'antd';
-
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import {Breadcrumb} from "antd";
 import apiClient from "../../../apiClient";
 import {ShoppingCartOutlined} from "@ant-design/icons";
+import Notify from '../../../utils/notify';
 
 function RightMenu(props) {
+  const [visible, setVisible] = React.useState(false)
   const user = useSelector(state => state.user)
+
   const logoutHandler = () => {
     apiClient.get(`${USER_SERVER}/logout`).then(response => {
       if (response.status === 200) {
-        props.history.push("/login");
+        setVisible(true)
+        setTimeout(() => {
+          props.history.push("/");
+          setVisible(false)
+        }, 2500)
       } else {
         alert('Log Out Failed')
       }
@@ -55,14 +61,11 @@ function RightMenu(props) {
         fontFamily: "'Lora', serif",fontSize:"20px", marginRight:"20px"}}>
           upload
         </a>
-        <Breadcrumb>
-          <Breadcrumb.Item key="logout">
             <a onClick={logoutHandler} style={{color: "rgb(124, 119, 119)",
             fontFamily: "'Lora', serif",fontSize:"20px"}}>
               Logout
             </a>
-          </Breadcrumb.Item>
-        </Breadcrumb>
+        <Notify visible = {visible} text={'로그아웃이 완료되었습니다.'} />
       </div>
     )
   }

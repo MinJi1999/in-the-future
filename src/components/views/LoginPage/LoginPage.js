@@ -19,6 +19,16 @@ function LoginPage(props) {
     setRememberMe(!rememberMe)
   };
 
+  const deleteColors = function () {
+    const hasColor = localStorage.getItem('color');
+    if(hasColor) {
+      localStorage.removeItem("color");
+      localStorage.removeItem("color2");
+      localStorage.removeItem("color3");
+      localStorage.removeItem("color4");
+    }
+  };
+
   const initialEmail = localStorage.getItem("rememberMe") ? localStorage.getItem("rememberMe") : '';
 
   return (
@@ -44,7 +54,6 @@ function LoginPage(props) {
 
           dispatch(loginUser(dataToSubmit))
             .then(response => {
-              
               if (response.payload.loginSuccess) {
                 window.localStorage.setItem('userId', response.payload.userId);
                 if (rememberMe === true) {
@@ -53,6 +62,7 @@ function LoginPage(props) {
                   localStorage.removeItem('rememberMe');
                 }
                 props.history.push("/");
+                deleteColors()
               } else {
                 setFormErrorMessage('Check out your Account or Password again')
               }
