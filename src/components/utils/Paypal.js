@@ -62,7 +62,6 @@ export default class Paypal extends React.Component {
                             label: 'checkout'
                         }}
                     />      
-        
                 )}
             </div>
         );

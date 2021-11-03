@@ -24,7 +24,7 @@ function CartPage(props) {
       if (cartItems.join("").indexOf(",") !== -1) {
         cartItems = cartItems.join("").substr(1);
         return cartItems;
-      } //이부분 해보니까 배열 요소 두개가 합쳐진상태로 리턴됨 이거 알아서 잘해봐ㅋ cartItems[0] 여기서 , 이게 있으면 없애고 어쩌구
+      }
       dispatch(getCartItems(cartItems, props.user.userData.cart)).then(
         (res) => {
           calculateTotal(res.payload);
